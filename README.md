@@ -1,28 +1,31 @@
-# Adonis API application
+# Noken API
 
-This is the boilerplate for creating an API server in AdonisJs, it comes pre-configured with.
+DFS algorithm implementation for the [noken challenge](https://github.com/baytelman/backend-interview). <br />
+Check the `start/noken.js` file.
 
-1. Bodyparser
-2. Authentication
-3. CORS
-4. Lucid ORM
-5. Migrations and seeds
+### Set Words
 
-## Setup
-
-Use the adonis command to install the blueprint
+POST url: https://noken.herokuapp.com/set_words
 
 ```bash
-adonis new yardstick --api-only
+body: { "words": [ "array", "arrays", "art", ... ] }
 ```
 
-or manually clone the repo and then run `npm install`.
+or use [these words](https://raw.githubusercontent.com/baytelman/backend-interview/master/files/dictionary.json).
 
+### Set Board
 
-### Migrations
-
-Run the following command to run startup migrations.
+POST url: https://noken.herokuapp.com/set_board
 
 ```js
-adonis migration:run
+body: { "board": [ "A", "B", "C", ... ] }
+```
+or use [this board](https://raw.githubusercontent.com/baytelman/backend-interview/master/files/test-board-1.json).
+
+### Query
+
+POST url: https://noken.herokuapp.com/query
+
+```js
+body: { "word": "fab" }
 ```
